@@ -2,6 +2,11 @@
 
 This document explains the workflow between different agents in the `.claude/agents/` directory, starting with the tech-lead agent.
 
+## Adapting team to your codebase
+```
+Read the codebase and make updates to the agents @.claude/agents/ to give them the context they need about the tech stack and patterns used
+```
+
 ## Agents Overview
 
 ### 🔴 Tech Lead
