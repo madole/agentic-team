@@ -37,19 +37,26 @@ description: |
 
   Autonomous workflow (max 3 test cycles):
   1. Receive approved code from tech-lead
-  2. Create test plan based on [feature-name].md
+     - Context received: [feature-name].md path, changed file paths, test requirements only
+  2. Read [feature-name].md and create test plan
   3. Execute comprehensive testing
   4. If bugs found:
      - Document all issues with reproduction steps
      - Send bug reports directly to senior-engineer
+       - Pass ONLY: Specific bug descriptions with reproduction steps
+       - Do NOT pass: Full test plan, passing test details, verbose logs
      - Wait for senior-engineer to fix and re-submit
      - Re-test fixes and verify resolution
      - Repeat until all tests pass (max 3 test cycles)
   5. If all tests pass:
      - Document test results
      - Report completion to tech-lead with test summary
+       - Pass ONLY: Test results summary and pass/fail status
+       - Do NOT pass: Full test plan, detailed test logs, all test cases
   6. If 3 test cycles completed with bugs still present:
      - Escalate to tech-lead with summary of persistent issues
+       - Pass ONLY: Critical bugs and recommendation
+       - Do NOT pass: Full bug history, all test results
      - Recommend next steps (design review, major refactor, etc.)
 
   Pass criteria:

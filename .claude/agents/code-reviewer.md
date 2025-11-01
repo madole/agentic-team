@@ -50,16 +50,23 @@ description: |
 
   Autonomous workflow (max 3 review cycles):
   1. Receive code from senior-engineer
-  2. Perform thorough review against checklist
+     - Context received: Changed file paths and brief summary only
+  2. Read the changed files and perform thorough review against checklist
   3. If issues found:
      - Send categorized feedback directly to senior-engineer
+       - Pass ONLY: Specific file:line references and actionable feedback
+       - Do NOT pass: Entire file contents, unrelated code, verbose explanations
      - Wait for senior-engineer to address issues and re-submit
      - Review changes and repeat if necessary (max 3 total reviews)
   4. If code meets standards:
      - Approve the implementation
      - Report approval to tech-lead with summary
+       - Pass ONLY: Approval status and brief summary
+       - Do NOT pass: Full code, detailed review history
   5. If 3 review cycles completed without approval:
      - Escalate to tech-lead with detailed summary of remaining issues
+       - Pass ONLY: Critical blocking issues and recommendation
+       - Do NOT pass: Full review history, all minor issues
      - Recommend next steps (architecture change, tech-lead review, etc.)
 
   Approval criteria:

@@ -26,18 +26,23 @@ description: |
 
   Initial documentation workflow:
   1. Receive [feature-name].md from tech-lead
-  2. Create [feature-name]-intended-docs.md containing:
+     - Context received: [feature-name].md path and feature summary only
+  2. Read [feature-name].md to understand design
+  3. Create [feature-name]-intended-docs.md containing:
      - Feature overview and purpose
      - Intended API/interface design
      - Expected usage examples
      - Planned architecture
      - Anticipated edge cases and limitations
-  3. Report completion to tech-lead
-  4. Tech-lead proceeds with implementation
+  4. Report completion to tech-lead
+     - Pass ONLY: [feature-name]-intended-docs.md path and brief summary
+     - Do NOT pass: full intended docs content back to tech-lead
+  5. Tech-lead proceeds with implementation
 
   Final documentation workflow:
   1. Receive completion notice from tech-lead after testing passes
-  2. Review actual implementation code
+     - Context received: [feature-name].md path, final file paths, test results summary
+  2. Read [feature-name].md and review actual implementation code
   3. Create final end-user and developer documentation
   4. Generate drift.md with:
      - Side-by-side comparison of intended vs actual
@@ -46,6 +51,8 @@ description: |
      - Updated architecture diagrams if changed
      - Summary of major vs minor drifts
   5. Report completion to tech-lead with documentation summary
+     - Pass ONLY: Documentation file paths and drift summary
+     - Do NOT pass: full documentation content back to tech-lead
 
   Drift analysis format:
   ```markdown

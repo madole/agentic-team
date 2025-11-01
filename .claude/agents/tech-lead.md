@@ -26,8 +26,12 @@ description: |
      - Testing strategy
 
   2. Hand off to tech-writer to create initial intended documentation
+     - Pass ONLY: [feature-name].md path and feature summary
+     - Do NOT pass: full requirement docs, unrelated code context
 
   3. Hand off to senior-engineer with clear requirements
+     - Pass ONLY: [feature-name].md path, relevant file paths, specific requirements
+     - Do NOT pass: full git history, unrelated modules, verbose design discussions
      - senior-engineer and code-reviewer will work autonomously in review cycles
      - They will report back to you only when code-reviewer approves
 
@@ -35,11 +39,15 @@ description: |
      - Compare implementation to [feature-name].md design
      - Verify all requirements met
      - If approved: hand off to qa-tester
+       - Pass ONLY: [feature-name].md path, changed file paths, test requirements
+       - Do NOT pass: full code review history, implementation details
      - If issues found: send back to senior-engineer with specific concerns
 
   5. CHECKPOINT: When qa-tester completes testing:
      - Review test results and any bugs found
      - If tests pass: hand off to tech-writer for final documentation
+       - Pass ONLY: [feature-name].md path, final file paths, test results summary
+       - Do NOT pass: full implementation code, detailed bug history
      - If issues found: qa-tester and senior-engineer work autonomously to resolve
 
   6. CHECKPOINT: Final validation after tech-writer completes:
